@@ -1,0 +1,69 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix vega: 		<http://scorpio4.com/v1/vocab/vega/>.
+@prefix : 		    <http://scorpio4.com/v1/vocab/vega/>.
+
+:	a					owl:Ontology;
+	owl:versionInfo		"0.1";
+	rdfs:label			"Vega";
+	dc:title			"Data Visualisation Vocabulary";
+	rdfs:comment		"Vocabulary for visualising data.";
+	dc:created			"2013-03-01"^^xsd:date;
+	dc:modified			"2013-03-01"^^xsd:date;
+	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>;
+.
+
+:Vega
+	a					rdfs:Class;
+	rdfs:label			"Vega";
+	rdfs:comment 		"Visual Data Object";
+	rdfs:isDefinedBy	:;
+.
+
+:data
+	rdfs:label		"data";
+	rdfs:comment	"A data specification."
+	rdfs:range		:Data;
+	rdfs:domain		:Specification;
+.
+
+:transform
+	rdfs:label		"transform";
+	rdfs:comment	"A transform specification."
+	rdfs:range		:Transform;
+	rdfs:domain		:Specification;
+.
+
+:scales
+	rdfs:label		"scales";
+	rdfs:comment	"A scaling specification."
+	rdfs:range		:Scale;
+	rdfs:domain		:Specification;
+.
+
+:axes
+	rdfs:label		"axes";
+	rdfs:comment	"A axes specification."
+	rdfs:range		:Axis;
+	rdfs:domain		:Specification;
+.
+
+:legends
+	rdfs:label		"legends";
+	rdfs:comment	"A legends specification."
+	rdfs:range		:Legend;
+	rdfs:domain		:Specification;
+.
+
+:marks
+	rdfs:label		"marks";
+	rdfs:comment	"A marks specification."
+	rdfs:range		:Mark;
+	rdfs:domain		:Specification;
+.
+
